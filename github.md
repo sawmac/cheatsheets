@@ -21,13 +21,17 @@ Host github.com
   HostName github.com
   User [username1]
   IdentityFile ~/.ssh/id_rsa
+  IdentitiesOnly yes
    
 #Secondary Account
 Host github-SECONDARY
   HostName github.com
   User [username2]
   IdentityFile ~/.ssh/id_rsa_Account2
+  IdentitiesOnly yes
 </code></pre>
+
+Make sure you add the ```IdentitiesOnly yes```. This is neccessary to make sure that you don't log into a GitHub account and get "stuck" with it. 
 
 To add remote repository using that secondary account
 
